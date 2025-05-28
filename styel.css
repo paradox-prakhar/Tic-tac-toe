@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6e5311;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.Text {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 33px;
+    padding: 10px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    padding: 15px 5px;
+    gap: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 100px));
+    grid-template-rows: repeat(3, minmax(80px, 100px));
+    grid-gap: 8px;
+    width: 100%;
+    max-width: 350px;
+    margin: 4px auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.boxs {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    font-size: clamp(60px, 10vw, 90px);
+    position: relative;
+    background-color: #f0e6d2;
+    transition: background-color 0.3s ease;
+}
+
+.boxs canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.boxs .boxtext {
+    display: none;
+}
+
+#reset {
+    font-size: clamp(18px, 5vw, 25px);
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-height: 60px;
+    width: 100%;
+    max-width: 215px;
+    background-color: #403502;
+    color: #FCECC9;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.3s ease;
+}
+
+.boxs:hover {
+    background-color: #E6E1C5;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#reset:hover {
+    cursor: pointer;
+    background-color: #524603;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    gap: 20px;
+}
+
+.info {
+    font-size: clamp(18px, 5vw, 25px);
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: 14px 10px;
+    min-height: 50px;
+    width: 100%;
+    max-width: 215px;
+    background-color: #403502;
+    color: #FCECC9;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info:hover{
+    cursor: pointer;
+    background-color: #524603;
+    transition: background-color 0.3s ease;
+}
+.win-highlight {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices - Small */
+@media screen and (max-width: 320px) {
+    .Text h1 {
+        font-size: 24px;
+    }
+    
+    .game {
+        grid-template-columns: repeat(3, minmax(60px, 80px));
+        grid-template-rows: repeat(3, minmax(60px, 80px));
+        grid-gap: 5px;
+        max-width: 280px;
+    }
+    
+    .boxs {
+        border-radius: 0.7rem;
+    }
+    
+    #reset, .info {
+        max-width: 160px;
+        min-height: 45px;
+        font-size: 16px;
+    }
+    
+    main {
+        padding: 8px 5px;
+        gap: 15px;
+    }
+}
+
+/* Mobile devices - Medium */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .Text h1 {
+        font-size: 28px;
+    }
+    
+    .game {
+        grid-template-columns: repeat(3, minmax(70px, 90px));
+        grid-template-rows: repeat(3, minmax(70px, 90px));
+        grid-gap: 6px;
+        max-width: 300px;
+    }
+    
+    .boxs {
+        border-radius: 0.8rem;
+    }
+    
+    #reset, .info {
+        max-width: 180px;
+    }
+    
+    main {
+        padding: 10px 5px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .game {
+        grid-template-columns: repeat(3, minmax(75px, 95px));
+        grid-template-rows: repeat(3, minmax(75px, 95px));
+        max-width: 320px;
+    }
+    
+    .Text h1 {
+        font-size: 30px;
+    }
+}
+
+/* Small desktops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .game {
+        max-width: 320px;
+    }
+}
+
+/* Fix for landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    main {
+        height: auto;
+        min-height: 100vh;
+        padding: 10px;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .game {
+        grid-template-columns: repeat(3, minmax(60px, 80px));
+        grid-template-rows: repeat(3, minmax(60px, 80px));
+        grid-gap: 5px;
+    }
+    
+    .footer {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .Text h1 {
+        font-size: 24px;
+    }
+}
+
+/* Touch device improvements */
+@media (hover: none) {
+    .boxs:hover, #reset:hover, .info:hover {
+        transform: none;
+    }
+    
+    .boxs:active {
+        background-color: #E6E1C5;
+    }
+    
+    #reset:active, .info:active {
+        background-color: #524603;
+    }
+}
