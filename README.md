@@ -71,6 +71,6 @@ A simple and fun **Tic Tac Toe** (or **Tic Tac Tre**) game built with HTML, CSS,
 
 ## 🔗 Live Demo
 
-👉 [Play Online Now](https://yourprojectname.netlify.app)
+👉 [Play Online Now](https://tic-tac-toe-two-plum-74.vercel.app/)
 
 
