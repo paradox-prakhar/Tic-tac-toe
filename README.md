@@ -45,15 +45,16 @@ A simple and fun **Tic Tac Toe** (or **Tic Tac Tre**) game built with HTML, CSS,
 - The game board is a 3x3 grid.
 - Each cell can be clicked once to place a mark (X or O).
 - After each move, the game checks for a win condition.
-- If a player wins, the winning cells are highlighted and the game-over music plays.
-- Clicking the **Reset** button clears the board and restarts background music.
+- If a player wins, the winning cells are highlighted, and the game-over music plays.
+- Clicking the **Reset** button clears the board and restarts the background music.
 
 ---
 
 ## 🖼️ Preview
 
-(![Screenshot 2025-05-28 090603](https://github.com/user-attachments/assets/3931ace1-180d-4be8-be76-7e5a0537eb3b)
-.png)
+![Screenshot 2025-05-28 090603](https://github.com/user-attachments/assets/3931ace1-180d-4be8-be76-7e5a0537eb3b)
+
+![Screenshot 2025-05-28 090628](https://github.com/user-attachments/assets/425c362e-27fc-48cc-b4fe-e41a1e2e3e0b)
 
 ---
 
